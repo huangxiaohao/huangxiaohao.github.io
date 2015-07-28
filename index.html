@@ -184,9 +184,9 @@
 <h2 id="VAL">VAL<br></h2><p>val():获得第一个匹配元素的当前值。<br>val(val):设置每一个匹配元素的值。</p>
 <hr> 
 
-<h2 id="上面的内容是在JQuery的帮助文档里拷贝的，也都不废话多说了。下面是自己做的一些练习，代码如下：">上面的内容是在JQuery的帮助文档里拷贝的，也都不废话多说了。下面是自己做的一些练习，代码如下：</h2><p>在做练习的时候我发现了html和text的另一个不同的地方<br>html()去元素的内容的时候，能将所选定的元素下面的格式也取到了。<br>如：<div id="divShow"><b><i>Write Less Do More</i></b></div><br>如果我们用var strHTML = $(“#divShow”).html();取的话，</p>
-<h2 id="结果是：Write_Less_Do_More">结果是：<b><i>Write Less Do More</i></b></h2><p>如果我们用var strHTML2 = $(“#divShow b i”).html();取的话<br>结果是Write Less Do More<br>而text没有第一种情况，<br>如果我们var strText = $(“#divShow”).text();取的话</p>
-<h2 id="结果是Write_Less_Do_More">结果是Write Less Do More</h2>
+<h2 id="上面的内容是在JQuery的帮助文档里拷贝的，也都不废话多说了。下面是自己做的一些练习，代码如下：">上面的内容是在JQuery的帮助文档里拷贝的，也都不废话多说了。下面是自己做的一些练习，代码如下：</h2><p>在做练习的时候我发现了html和text的另一个不同的地方<br>html()去元素的内容的时候，能将所选定的元素下面的格式也取到了。<br>如：<code>&lt;div id=&quot;divShow&quot;&gt;&lt;b&gt;&lt;i&gt;Write Less Do More&lt;/i&gt;&lt;/b&gt;&lt;/div&gt;</code><br>如果我们用<code>var strHTML = $(&quot;#divShow&quot;).html();</code>取的话，<br>结果是：<code>&lt;b&gt;&lt;i&gt;Write Less Do More&lt;/i&gt;&lt;/b&gt;</code><br>如果我们用<code>var strHTML2 = $(&quot;#divShow b i&quot;).html();</code>取的话，</p>
+<h2 id="结果是Write_Less_Do_More">结果是Write Less Do More</h2><p>而text没有第一种情况，<br>如果我们<code>var strText = $(&quot;#divShow&quot;).text();</code>取的话</p>
+<h2 id="结果是Write_Less_Do_More-1">结果是Write Less Do More</h2>
       
     </div>
     
