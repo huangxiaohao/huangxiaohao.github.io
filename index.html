@@ -152,6 +152,68 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="yilia-my-second-blog" class="article article-type-yilia" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/28/my-second-blog/" class="article-date">
+  	<time datetime="2015-07-28T12:51:03.000Z" itemprop="datePublished">2015-07-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/28/my-second-blog/">JQuery中的html(),text(),val()区别</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>啦啦啦~~~</p>
+<h2 id="HTML">HTML<br></h2><p>html():取得第一个匹配元素的html内容。这个函数不能用于XML文档。但可以用于XHTML文档。<br>html(val):设置每一个匹配元素的html内容。这个函数不能用于XML文档。但可以用于XHTML文档。</p>
+<h2 id="TEXT">TEXT<br></h2><p>text():取得所有匹配元素的内容。<br>结果是由所有匹配元素包含的文本内容组合起来的文本。这个方法对HTML和XML文档都有效。<br>text(val):设置所有匹配元素的文本内容。<br>与 html() 类似, 但将编码 HTML (将 “&lt;” 和 “&gt;” 替换成相应的HTML实体)。</p>
+<h2 id="VAL">VAL<br></h2><p>val():获得第一个匹配元素的当前值。<br>val(val):设置每一个匹配元素的值。</p>
+<hr> 
+
+<h2 id="上面的内容是在JQuery的帮助文档里拷贝的，也都不废话多说了。下面是自己做的一些练习，代码如下：">上面的内容是在JQuery的帮助文档里拷贝的，也都不废话多说了。下面是自己做的一些练习，代码如下：</h2><p>在做练习的时候我发现了html和text的另一个不同的地方<br>html()去元素的内容的时候，能将所选定的元素下面的格式也取到了。<br>如：<div id="divShow"><b><i>Write Less Do More</i></b></div><br>如果我们用var strHTML = $(“#divShow”).html();取的话，</p>
+<h2 id="结果是：Write_Less_Do_More">结果是：<b><i>Write Less Do More</i></b></h2><p>如果我们用var strHTML2 = $(“#divShow b i”).html();取的话<br>结果是Write Less Do More<br>而text没有第一种情况，<br>如果我们var strText = $(“#divShow”).text();取的话</p>
+<h2 id="结果是Write_Less_Do_More">结果是Write Less Do More</h2>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/JQuery-html-text-val/">JQuery html text val</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-my-first-blog" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
