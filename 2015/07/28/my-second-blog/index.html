@@ -15,7 +15,7 @@ TEXTtext():取得所有匹配元素的内容。结果是由所有匹配元素包
 <meta property="og:description" content="啦啦啦~~~
 HTMLhtml():取得第一个匹配元素的html内容。这个函数不能用于XML文档。但可以用于XHTML文档。html(val):设置每一个匹配元素的html内容。这个函数不能用于XML文档。但可以用于XHTML文档。
 TEXTtext():取得所有匹配元素的内容。结果是由所有匹配元素包含的文本内容组合起来的文本。这个方法对HTML和XML文档都有效。text(val):设置所有匹配">
-<meta property="og:updated_time" content="2015-07-28T13:34:59.914Z">
+<meta property="og:updated_time" content="2015-08-01T07:10:52.101Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JQuery中的html(),text(),val()区别">
 <meta name="twitter:description" content="啦啦啦~~~
@@ -83,6 +83,8 @@ TEXTtext():取得所有匹配元素的内容。结果是由所有匹配元素包
 						
 							<li><a href="/">主页</a></li>
 				        
+							<li><a href="/archives">所有文章</a></li>
+				        
 						</ul>
 					</nav>
 					<nav class="header-nav">
@@ -90,11 +92,11 @@ TEXTtext():取得所有匹配元素的内容。结果是由所有匹配元素包
 							
 								<a class="github" target="_blank" href="https://github.com/huangxiaohao/huangxiaohao.github.io" title="github">github</a>
 					        
-								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+								<a class="weibo" target="_blank" href="http://weibo.com/" title="weibo">weibo</a>
 					        
 								<a class="zhihu" target="_blank" href="http://www.zhihu.com/" title="zhihu">zhihu</a>
 					        
-								<a class="douban" target="_blank" href="/#" title="douban">douban</a>
+								<a class="douban" target="_blank" href="http://www.douban.com/" title="douban">douban</a>
 					        
 						</div>
 					</nav>
@@ -103,7 +105,7 @@ TEXTtext():取得所有匹配元素的内容。结果是由所有匹配元素包
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						
+						<a href="/tags/html-text-val/" style="font-size: 10px;">html text val</a>
 					</div>
 				</section>
 				
@@ -138,6 +140,8 @@ TEXTtext():取得所有匹配元素的内容。结果是由所有匹配元素包
 				
 					<li><a href="/">主页</a></li>
 		        
+					<li><a href="/archives">所有文章</a></li>
+		        
 		        <div class="clearfix"></div>
 				</ul>
 			</nav>
@@ -146,11 +150,11 @@ TEXTtext():取得所有匹配元素的内容。结果是由所有匹配元素包
 					
 						<a class="github" target="_blank" href="https://github.com/huangxiaohao/huangxiaohao.github.io" title="github">github</a>
 			        
-						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+						<a class="weibo" target="_blank" href="http://weibo.com/" title="weibo">weibo</a>
 			        
 						<a class="zhihu" target="_blank" href="http://www.zhihu.com/" title="zhihu">zhihu</a>
 			        
-						<a class="douban" target="_blank" href="/#" title="douban">douban</a>
+						<a class="douban" target="_blank" href="http://www.douban.com/" title="douban">douban</a>
 			        
 				</div>
 			</nav>
@@ -182,9 +186,13 @@ TEXTtext():取得所有匹配元素的内容。结果是由所有匹配元素包
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html-text-val/">html text val</a></li></ul>
+	</div>
+
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/JQuery-html-text-val/">JQuery html text val</a>
+	<a class="article-category-link" href="/categories/JQuery/">JQuery</a>
 	</div>
 
 
@@ -200,7 +208,7 @@ TEXTtext():取得所有匹配元素的内容。结果是由所有匹配元素包
 <h2 id="VAL">VAL<br></h2><p>val():获得第一个匹配元素的当前值。<br>val(val):设置每一个匹配元素的值。</p>
 <hr> 
 
-<h2 id="上面的内容是在JQuery的帮助文档里拷贝的，也都不废话多说了。下面是自己做的一些练习，代码如下：">上面的内容是在JQuery的帮助文档里拷贝的，也都不废话多说了。下面是自己做的一些练习，代码如下：</h2><p>在做练习的时候我发现了html和text的另一个不同的地方<br>html()去元素的内容的时候，能将所选定的元素下面的格式也取到了。<br>如：<code>&lt;div id=&quot;divShow&quot;&gt;&lt;b&gt;&lt;i&gt;Write Less Do More&lt;/i&gt;&lt;/b&gt;&lt;/div&gt;</code><br>如果我们用<code>var strHTML = $(&quot;#divShow&quot;).html();</code>取的话，<br>结果是：<code>&lt;b&gt;&lt;i&gt;Write Less Do More&lt;/i&gt;&lt;/b&gt;</code><br>如果我们用<code>var strHTML2 = $(&quot;#divShow b i&quot;).html();</code>取的话，</p>
+<h2 id="上面的内容是在JQuery的帮助文档里拷贝的。下面是一些练习，代码如下：">上面的内容是在JQuery的帮助文档里拷贝的。下面是一些练习，代码如下：</h2><p>在做练习的时候我发现了html和text的另一个不同的地方<br>html()去元素的内容的时候，能将所选定的元素下面的格式也取到了。<br>如：<code>&lt;div id=&quot;divShow&quot;&gt;&lt;b&gt;&lt;i&gt;Write Less Do More&lt;/i&gt;&lt;/b&gt;&lt;/div&gt;</code><br>如果我们用<code>var strHTML = $(&quot;#divShow&quot;).html();</code>取的话，<br>结果是：<code>&lt;b&gt;&lt;i&gt;Write Less Do More&lt;/i&gt;&lt;/b&gt;</code><br>如果我们用<code>var strHTML2 = $(&quot;#divShow b i&quot;).html();</code>取的话，</p>
 <h2 id="结果是Write_Less_Do_More">结果是Write Less Do More</h2><p>而text没有第一种情况，<br>如果我们<code>var strText = $(&quot;#divShow&quot;).text();</code>取的话</p>
 <h2 id="结果是Write_Less_Do_More-1">结果是Write Less Do More</h2>
       
