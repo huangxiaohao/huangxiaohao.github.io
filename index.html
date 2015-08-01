@@ -263,24 +263,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>啦啦啦~~~</p>
-<h2 id="1-_first过滤选择器"><p style="color:blue;">1. first过滤选择器</p></h2><p>过滤选择器，该类型的选择器是根据某过滤规则进行元素的匹配，书写时以“：”号开头,通常用于查找集合元素中的某一位置的单个元素。<br>在jQuery中，如果想得到一组相同标签元素中的第1个元素该怎样做呢？<br>在下面的示例代码中你可能注意到我们会使用<br><code>$(“li:first”)</code><br>注意：书写时以“：”号开头。<br><img src="/img/4.1.jpg"></p>
-<p><strong>运行结果：</strong><br><img src="/img/4.2.jpg"></p>
-<p>使用<code>li:first</code>过滤选择器可以很方便地获取ul列表中的第一个li元素.<br><code>:first</code>过滤选择器的功能是获取第一个元素，常常与其它选择器一起使用，获取指定的一组元素中的第一个元素。</p>
-<h2 id="2-_:eq(index)过滤选择器"><p style="color:blue;">2. :eq(index)过滤选择器</p></h2><p>如果想从一组标签元素数组中，灵活选择任意的一个标签元素，我们可以使用<br><code>:eq(index)</code><br>其中参数<code>index</code>表示索引号（即：一个整数），它从0开始，如果<code>index</code>的值为3，表示选择的是第4个元素。例如：<br><img src="/img/4.3.jpg"></p>
-<p><strong>在浏览器中显示的效果：</strong><br><img src="/img/4.4.jpg"></p>
-<p>从图中可以看出，通过调用<code>$(&quot;li:eq(3)&quot;)</code>过滤选择器代码，获取了第4个<code>&lt;li&gt;</code>元素，并使用css()方法设置了该元素在页面中显示的文字样式。</p>
-<h2 id="3-_:contains(text)过滤选择器"><p style="color:blue;">3. :contains(text)过滤选择器</p></h2><p>与上一节介绍的<code>:eq(index)</code>选择器按索引查找元素相比，有时候我们可能希望按照文本内容来查找一个或多个元素，那么使用<code>:contains(text)</code>选择器会更加方便， 它的功能是选择包含指定字符串的全部元素，它通常与其他元素结合使用，获取包含<code>text</code>字符串内容的全部元素对象。其中参数<code>text</code>表示页面中的文字。<br>例如:<br><img src="/img/4.5.jpg"></p>
-<p><strong>在浏览器中显示的效果：</strong><br><img src="/img/4.6.jpg"></p>
-<p>从图中可以看出，调用<code>li:contains(&#39;土豪&#39;)</code>代码，可以很方便地获取<code>&lt;li&gt;</code>中包含<code>土豪</code>字符内容的全部元素，并且只要与选择的元素中或子元素中包含该字符内容，就可以被选中。<br>注意：<code>li:contains(&#39;土豪&#39;)</code> 土豪为什么必须加单引号呢？因为它是一个字符串，而不是一个变量，所以不加单或双引号的话是会报错的。</p>
-<h2 id="4-_:has(selector)过滤选择器"><p style="color:blue;">4. :has(selector)过滤选择器</p></h2><p>除了在上一小节介绍的使用包含的字符串内容过滤元素之外，还可以使用包含的元素名称来过滤，<code>:has(selector)</code>过滤选择器的功能是获取选择器中包含指定元素名称的全部元素，其中<code>selector</code>参数就是包含的元素名称，是被包含元素。</p>
-<p>例如：使用<code>:has(selector)</code>选择器，获取包含<code>&lt;label&gt;</code>名称的全部<code>&lt;li&gt;</code>元素，并改变它们显示的背景色。<br><img src="/img/4.7.png"></p>
-<p><img src="/img/4.8.png"></p>
-<h2 id="5-_:hidden过滤选择器"><p style="color:blue;">5. :hidden过滤选择器</p></h2><p><code>:hidden</code>过滤选择器的功能是获取全部不可见的元素，这些不可见的元素中包括<code>type</code>属性值为<code>hidden</code>的元素。<br>例如，调用<code>:hidden</code>选择器获取不可见的<code>&lt;p&gt;</code>元素，并将该元素的内容显示在<code>&lt;div&gt;</code>元素中，如下图所示：<br><img src="/img/4.9.jpg"></p>
-<p><strong>在浏览器中显示的效果：</strong><br><img src="/img/4.10.jpg"><br>从图中可以看出，先调用<code>$(&quot;p:hidden&quot;)</code>代码获取隐藏的<code>&lt;p&gt;</code>元素，并调用该元素的<code>html()</code>方法获取该元素中的内容，最后将该内容显示在<code>&lt;div&gt;</code>元素中。</p>
-<h2 id="6-_:visible过滤选择器（与:hidden对应）"><p style="color:blue;">6. :visible过滤选择器（与:hidden对应）</p></h2><p>与上一节的<code>:hidden</code>过滤选择器相反，<code>:visible</code>过滤选择器获取的是全部可见的元素，也就是说，只要不将元素的display属性值设置为“none”，那么，都可以通过该选择器获取。<br>例如，使用<code>:visible</code>选择器获取可见的<code>&lt;p&gt;</code>元素，并将该元素的内容显示在<code>&lt;div&gt;</code>元素中，如下图所示：<br><img src="/img/4.11.jpg"></p>
-<p><strong>在浏览器中显示的效果：</strong><br><img src="/img/4.12.jpg"></p>
-<p>从图中可以看出，调用<code>$(&quot;p:visible&quot;)</code>选择器代码，获取那个可见的<code>&lt;p&gt;</code>元素，并调用<code>html()</code>方法获取该元素的内容，最后将该内容显示在<code>&lt;div&gt;</code>元素中。</p>
-
+<h2 id="1-_first过滤选择器"><p style="color:blue;">1. first过滤选择器</p></h2><p>过滤选择器，该类型的选择器是根据某过滤规则进行元素的匹配，书写时以“：”号开头,通常用于查找集合元素中的某一位置的单个元素。<br>在jQuery中，如果想得到一组相同标签元素中的第1个元素该怎样做呢？</p>
       
     </div>
     
@@ -293,6 +276,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/08/01/4/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -335,11 +322,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>啦啦啦~~~</p>
-<h2 id="1-_ance_desc选择器"><p style="color:blue;">1. ance desc选择器</p></h2><p><code>$(&quot;ance desc&quot;)</code><br>其中<code>ance desc</code>是使用空格隔开的两个参数。ance参数（ancestor祖先的简写）表示父元素；desc参数（descendant后代的简写）表示后代元素，即包括子元素、孙元素等等。两个参数都可以通过选择器来获取。比如家族姓氏<code>div</code>，家族几代人里，都有名字里带<code>span</code>的，就可以用这个<code>ance desc</code>选择器把这几个人给定位出来。<br>例如，使用层次选择器，获取<code>&lt;div&gt;</code>元素中的全部<code>&lt;span&gt;</code>元素，并设置它们显示的内容，在如下图所示：<br><img src="/img/3.1.jpg"><br>在浏览器中显示的效果：<br><img src="/img/3.2.jpg"><br>从图中可以看出，使用层次选择器<code>$(&quot;div span&quot;)</code>获取了在<code>&lt;div&gt;</code>元素中的两个元素，一个是<code>&lt;p&gt;</code>元素中的子元素，另一个是<code>&lt;p&gt;</code>元素外的同级元素，但它们都是在一个<code>&lt;div&gt;</code>元素下，也就是说在一个“家族”下。</p>
-<h2 id="2-_parent_&gt;_child选择器"><p style="color:blue;">2. parent &gt; child选择器</p></h2><p><code>parent &gt; child</code>选择器的范围要小些，它所选择的目标是子集元素，相当于一个家庭中的子辈们，但不包括孙辈，它的调用格式如下：<br><code>$(“parent &gt; child”)</code><br>child参数获取的元素都是parent选择器的子元素，它们之间通过<code>&gt;</code>符号来表示一种层次关系。<br>如图所示：<br><img src="/img/3.3.jpg"><br>在浏览器中显示的效果：<br><img src="/img/3.4.jpg"><br>从图中可以看出，使用<code>$(&quot;div&gt;span&quot;)</code>选择器代码，获取的是<code>&lt;div&gt;</code>“家庭中”全部“子辈”<code>&lt;span&gt;</code>元素，不包括“孙辈”<code>&lt;span&gt;</code>元素和“家庭外”的<code>&lt;span&gt;</code>元素。</p>
-<h2 id="3-_prev_+_next选择器"><p style="color:blue;">3. prev + next选择器</p></h2><p>通过<code>prev + next</code>择器就可以查找与<code>prev</code>元素紧邻的下一个<code>ext</code>元素，格式如下：<br><code>$(“prev + next”)</code><br>其中参数<code>prev</code>为任何有效的选择器，参数<code>next</code>为另外一个有效选择器，它们之间的“+”表示一种上下的层次关系，也就是说，<span style="color:red;"><code>prev</code>元素最紧邻的下一个元素由<code>next</code>选择器返回的并且只返回唯一一个元素。</span><br>例如，使用<code>prev + next</code>选择器，获取<code>&lt;p&gt;</code>元素最近邻的下一个元素，如下图所示：<br><img src="/img/3.5.jpg"><br>在浏览器中显示的效果：<br><img src="/img/3.6.jpg"></p>
-<h2 id="4-_prev_~_siblings选择器"><p style="color:blue;">4. prev ~ siblings选择器</p></h2><p>与上一节中介绍的<code>prev + next</code>层次选择器相同，<code>prev ~ siblings</code>选择器也是查找<code>prev</code>元素之后的相邻元素，但前者只获取第一个相邻的元素，而后者则获取<code>prev</code>元素后面全部相邻的元素，它的调用格式如下：<br><code>$(“prev ~ siblings”)</code><br>其中参数<code>prev</code>与<code>siblings</code>两者之间通过“~”符号形成一种层次相邻的关系，表明siblings选择器获取的元素都是<code>prev</code>元素之后的同辈元素。<br>例如，使用<code>prev ~ next</code>选择器，获取<code>&lt;p&gt;</code>元素后面相邻的全部元素，并设置它们在页面中显示的内容，如下图所示：<br><img src="/img/3.7.jpg"><br>在浏览器中显示的效果：<br><img src="/img/3.8.jpg"><br>可以看出，调用<code>$(&quot;p~span&quot;)</code>选择器代码，获取了<code>&lt;p&gt;</code>元素下面两个(全部)的<code>&lt;span&gt;</code>元素，<span style="color:red;">该元素不包含<code>&lt;p&gt;</code>元素上面的元素和不属于同辈范围的元素。</span></p>
-
+<h2 id="1-_ance_desc选择器"><p style="color:blue;">1. ance desc选择器</p></h2><p><code>$(&quot;ance desc&quot;)</code><br>其中<code>ance desc</code>是使用空格隔开的两个参数。ance参数（ancestor祖先的简写）表示父元素；desc参数（descendant后代的简写）表示后代元素，即包括子元素、孙元素等等。两个参数都可以通过选择器来获取。比如家族姓氏<code>div</code>，家族几代人里，都有名字里带<code>span</code>的，就可以用这个<code>ance desc</code>选择器把这几个人给定位出来。<br>例如，使用层次选择器，获取<code>&lt;div&gt;</code>元素中的全部<code>&lt;span&gt;</code>元素，并设置它们显示的内容，在如下图所示：</p>
       
     </div>
     
@@ -352,6 +335,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/08/01/3/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -395,13 +382,6 @@
       
         <p>啦啦啦~~~</p>
 <h2 id="HTML">HTML<br></h2><p>html():取得第一个匹配元素的html内容。这个函数不能用于XML文档。但可以用于XHTML文档。<br>html(val):设置每一个匹配元素的html内容。这个函数不能用于XML文档。但可以用于XHTML文档。</p>
-<h2 id="TEXT">TEXT<br></h2><p>text():取得所有匹配元素的内容。<br>结果是由所有匹配元素包含的文本内容组合起来的文本。这个方法对HTML和XML文档都有效。<br>text(val):设置所有匹配元素的文本内容。<br>与 html() 类似, 但将编码 HTML (将 “&lt;” 和 “&gt;” 替换成相应的HTML实体)。</p>
-<h2 id="VAL">VAL<br></h2><p>val():获得第一个匹配元素的当前值。<br>val(val):设置每一个匹配元素的值。</p>
-<hr> 
-
-<h2 id="上面的内容是在JQuery的帮助文档里拷贝的。下面是一些练习，代码如下：">上面的内容是在JQuery的帮助文档里拷贝的。下面是一些练习，代码如下：</h2><p>在做练习的时候我发现了html和text的另一个不同的地方<br>html()去元素的内容的时候，能将所选定的元素下面的格式也取到了。<br>如：<code>&lt;div id=&quot;divShow&quot;&gt;&lt;b&gt;&lt;i&gt;Write Less Do More&lt;/i&gt;&lt;/b&gt;&lt;/div&gt;</code><br>如果我们用<code>var strHTML = $(&quot;#divShow&quot;).html();</code>取的话，<br>结果是：<code>&lt;b&gt;&lt;i&gt;Write Less Do More&lt;/i&gt;&lt;/b&gt;</code><br>如果我们用<code>var strHTML2 = $(&quot;#divShow b i&quot;).html();</code>取的话，</p>
-<h2 id="结果是Write_Less_Do_More">结果是Write Less Do More</h2><p>而text没有第一种情况，<br>如果我们<code>var strText = $(&quot;#divShow&quot;).text();</code>取的话</p>
-<h2 id="结果是Write_Less_Do_More-1">结果是Write Less Do More</h2>
       
     </div>
     
@@ -414,6 +394,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/07/28/my-second-blog/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -457,70 +441,11 @@
       
         <p>啦啦啦~~~<br>原文参考以下：</p>
 <ol>
-<li><a href="http://lutaf.com/markdown-simple-usage.htm" target="_blank" rel="external">鲁塔弗:markdown 简明语法</a></li>
-<li><a href="http://www.ituring.com.cn/article/23" target="_blank" rel="external">图灵社区：怎样使用Markdown</a></li>
-<li><a href="http://www.jianshu.com/p/q81RER" target="_blank" rel="external">简书：献给写作者的 Markdown 新手指南</a></li>
+<li><a href="http://lutaf.com/markdown-simple-usage.htm">鲁塔弗:markdown 简明语法</a></li>
+<li><a href="http://www.ituring.com.cn/article/23">图灵社区：怎样使用Markdown</a></li>
+<li><a href="http://www.jianshu.com/p/q81RER">简书：献给写作者的 Markdown 新手指南</a></li>
 </ol>
 <hr>
-<h2 id="第一段_基本符号">第一段 基本符号</h2><p>“*”,”-“,”+” 3个符号效果都一样，这3个符号被称为 Markdown符号<br>空白行表示另起一个段落（下面加了空白行，故换行）</p>
-<p>`是表示inline代码，tab是用来标记 代码段，分别对应html的code，pre标签</p>
-<hr>
-<h2 id="第二段_换行">第二段 换行</h2><p>单一段落用一个空白行<br>使用&lt; br &gt;也会换行。（下面的换行就是由&lt; br &gt;实现）<br><br>连续3个符号（”*”,”-“,”+”），然后再加一个空行，表示 hr横线（是个虚线），直接使用&lt; hr &gt;也会出现虚线，如下</p>
-<hr>
-<h2 id="第三段_标题">第三段 标题</h2><p>生成h1—h6,在文字前面加上 1—6个# 来实现，同样也可以使用&lt; h1 &gt;~&lt; h6 &gt;来生成标题。<br><strong>文字加粗是通过 文字左右各两个符号（”*”,”-“,”+”）</strong></p>
-<h2 id="第四段_引用">第四段 引用</h2><p>在第一行加上 “&gt;”和一个空格，表示代码引用，还可以嵌套</p>
-<blockquote>
-<p>这里是引用的内容。</p>
-<hr>
-</blockquote>
-<h2 id="第五段_列表">第五段 列表</h2><p>这个是markdown文件的主要表示方式，主题要点化</p>
-<ul>
-<li>使用”*”,”+”,”-“加上一个空格来表示    </li>
-<li>使用”*”,”+”,”-“加上一个空格来表示<br>可以支持嵌套</li>
-</ul>
-<ol>
-<li>有序列表用 数字+英文点+空格来表示</li>
-<li>有序列表用 数字+英文点+空格来表示<br>列表内容很长，不需要手工输入换行符，css控制段落的宽度，会自动的缩放的<hr>
-
-</li>
-</ol>
-<h2 id="第六段_链接">第六段 链接</h2><p>中括号内写锚文本即可（直接写 <code>[锚文本](url &quot;可选的title&quot;)</code>）：<a href="http://www.baidu.com" title="可选的title" target="_blank" rel="external">这是一个百度链接</a><br>引用 先定义 <code>[ref_name]:url</code>，然后在需要写入url的地方， 这样使用[锚文本][ref_name]，通常的ref_name一般用数字表示，这样显得专业<br>简写url：用尖括号包裹url<br>这样生成的url锚文本就是url本身</p>
-<hr>
-
-<h2 id="第七段_插入图片">第七段 插入图片</h2><p>一行表示: <code>![alt_text](url &quot;可选的title&quot;)</code>  url为图片路径<br>引用表示法: ![alt_text][id],预先定义 [id]:url “可选title”<br>直接使用&lt; img src=”#”&gt;标签，这样可以指定图片的大小尺寸</p>
-<hr>
-
-<h2 id="第八段_特殊符号用">第八段 特殊符号用</h2><p>\来转义，表示文本中的markdown符号<br>可以在文本中直接使用html标签，但是要注意在使用的时候，前后加上空行<br>文本前后各加一个符号，<em>表示斜体</em></p>
-<h2 id="第九段_代码引入">第九段 代码引入</h2><p><span style="color:red">行的开头空4个空格</span>，表示程序代码，例如：</p>
-<p>C#:</p>
-<pre><code><span class="comment">//这里显示一些代码，在正文显示中会自动识别语言，进行代码染色，这是一段C#代码</span>
-<span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Blog</span>
-{
-     <span class="keyword">public</span> <span class="keyword">int</span> Id { <span class="keyword">get</span>; <span class="keyword">set</span>; }
-     <span class="keyword">public</span> <span class="keyword">string</span> Subject { <span class="keyword">get</span>; <span class="keyword">set</span>; }
-}
-</code></pre><p>Python:</p>
-<pre><code>keywords = [<span class="string">"dsaa"</span>,<span class="string">"Asd"</span>,<span class="string">"sadc"</span>,<span class="string">"Gdfd"</span>,<span class="string">"gdfdd"</span>,<span class="string">"gaf"</span>,<span class="string">"gabdddddd"</span>,<span class="string">"eg"</span>]
-print <span class="function"><span class="title">dict</span><span class="params">([(i[<span class="number">0</span>],list(i[<span class="number">1</span>])</span></span>) <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> <span class="function"><span class="title">groupby</span><span class="params">(sorted(keywords)</span></span>,lambda    x:x[<span class="number">0</span>].<span class="function"><span class="title">lower</span><span class="params">()</span></span>)])
-</code></pre><p>Javascript:</p>
-<pre><code><span class="comment">/**
- * nth element in the fibonacci series.
- * <span class="doctag">@param</span> n &gt;= 0
- * <span class="doctag">@return</span> the nth element, &gt;= 0.
- */</span>
-<span class="function"><span class="keyword">function</span> <span class="title">fib</span><span class="params">(n)</span> </span>{
-    <span class="keyword">var</span> a = <span class="number">1</span>, b = <span class="number">1</span>;
-    <span class="keyword">var</span> tmp;
-    <span class="keyword">while</span> (--n &gt;= <span class="number">0</span>) {
-        tmp = a;
-        a += b;
-       b = tmp;
-    }
-    <span class="keyword">return</span> a;
-}
-
-document.write(fib(<span class="number">10</span>));
-</code></pre>
       
     </div>
     
@@ -533,6 +458,10 @@ document.write(fib(<span class="number">10</span>));
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2015/07/25/my-first-blog/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
