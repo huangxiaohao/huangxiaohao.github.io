@@ -98,7 +98,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/JQuery/" style="font-size: 20px;">JQuery</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a>
+						<a href="/tags/JQuery/" style="font-size: 20px;">JQuery</a> <a href="/tags/JQuery-JS/" style="font-size: 10px;">JQuery/JS</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a>
 					</div>
 				</section>
 				
@@ -155,6 +155,73 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-5" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/08/01/5/" class="article-date">
+  	<time datetime="2015-08-01T10:00:09.000Z" itemprop="datePublished">2015-08-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/08/01/5/">js/jquery控制页面动态加载数据 滑动滚动条自动加载更多内容</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>啦啦啦~~~</p>
+<p><strong>下面的代码主要是控制滚动条下拉时的加载事件的</strong></p>
+<pre><code>$(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{
+        <span class="keyword">var</span> scrollTop = $(<span class="keyword">this</span>).scrollTop();<span class="comment">//滚轮卷出（滚轮距顶部距离）高度</span>
+        <span class="keyword">var</span> scrollHeight = $(<span class="built_in">document</span>).height();<span class="comment">//整个文档高度</span>
+        <span class="keyword">var</span> windowHeight = $(<span class="keyword">this</span>).height();<span class="comment">//当前屏幕高度       </span>
+         <span class="comment">//文档-(卷去+当前屏幕)=文档余下距离          </span>
+         <span class="keyword">if</span> (scrollHeight - (scrollTop + windowHeight)&lt;n) {
+
+           <span class="comment">/*此处是滚动条到距底部n个px时候触发的事件，在这里写要加载的数据，或者是拉动滚动条的操作*/</span>
+
+        }
+    });
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JQuery-JS/">JQuery/JS</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
   
     <article id="post-4" class="article article-type-post" itemscope itemprop="blogPost">
   
