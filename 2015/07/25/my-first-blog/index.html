@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>markdown 学习 | 黄小浩|一切茫然的都是对于未知的恐惧</title>
+  <title>markdown语法浅谈 | 黄小浩|一切茫然的都是对于未知的恐惧</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="啦啦啦~~~原文参考以下：
 
@@ -17,7 +17,7 @@
 
 第二">
 <meta property="og:type" content="article">
-<meta property="og:title" content="markdown 学习">
+<meta property="og:title" content="markdown语法浅谈">
 <meta property="og:url" content="https://github.com/huangxiaohao/huangxiaohao.github.io/2015/07/25/my-first-blog/index.html">
 <meta property="og:site_name" content="黄小浩|一切茫然的都是对于未知的恐惧">
 <meta property="og:description" content="啦啦啦~~~原文参考以下：
@@ -31,9 +31,9 @@
 `是表示inline代码，tab是用来标记 代码段，分别对应html的code，pre标签
 
 第二">
-<meta property="og:updated_time" content="2015-08-01T07:44:49.923Z">
+<meta property="og:updated_time" content="2015-08-01T09:56:45.700Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="markdown 学习">
+<meta name="twitter:title" content="markdown语法浅谈">
 <meta name="twitter:description" content="啦啦啦~~~原文参考以下：
 
 鲁塔弗:markdown 简明语法
@@ -202,7 +202,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      markdown 学习
+      markdown语法浅谈
     </h1>
   
 
@@ -258,7 +258,36 @@
 <hr>
 
 <h2 id="第八段_特殊符号用">第八段 特殊符号用</h2><p>\来转义，表示文本中的markdown符号<br>可以在文本中直接使用html标签，但是要注意在使用的时候，前后加上空行<br>文本前后各加一个符号，<em>表示斜体</em></p>
+<h2 id="第九段_代码引入">第九段 代码引入</h2><p><span style="color:red">行的开头空4个空格</span>，表示程序代码，例如：</p>
+<p>C#:</p>
+<pre><code><span class="comment">//这里显示一些代码，在正文显示中会自动识别语言，进行代码染色，这是一段C#代码</span>
+<span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Blog</span>
+{
+     <span class="keyword">public</span> <span class="keyword">int</span> Id { <span class="keyword">get</span>; <span class="keyword">set</span>; }
+     <span class="keyword">public</span> <span class="keyword">string</span> Subject { <span class="keyword">get</span>; <span class="keyword">set</span>; }
+}
+</code></pre><p>Python:</p>
+<pre><code>keywords = [<span class="string">"dsaa"</span>,<span class="string">"Asd"</span>,<span class="string">"sadc"</span>,<span class="string">"Gdfd"</span>,<span class="string">"gdfdd"</span>,<span class="string">"gaf"</span>,<span class="string">"gabdddddd"</span>,<span class="string">"eg"</span>]
+print <span class="function"><span class="title">dict</span><span class="params">([(i[<span class="number">0</span>],list(i[<span class="number">1</span>])</span></span>) <span class="keyword">for</span> <span class="tag">i</span> <span class="keyword">in</span> <span class="function"><span class="title">groupby</span><span class="params">(sorted(keywords)</span></span>,lambda    x:x[<span class="number">0</span>].<span class="function"><span class="title">lower</span><span class="params">()</span></span>)])
+</code></pre><p>Javascript:</p>
+<pre><code><span class="comment">/**
+ * nth element in the fibonacci series.
+ * <span class="doctag">@param</span> n &gt;= 0
+ * <span class="doctag">@return</span> the nth element, &gt;= 0.
+ */</span>
+<span class="function"><span class="keyword">function</span> <span class="title">fib</span><span class="params">(n)</span> </span>{
+    <span class="keyword">var</span> a = <span class="number">1</span>, b = <span class="number">1</span>;
+    <span class="keyword">var</span> tmp;
+    <span class="keyword">while</span> (--n &gt;= <span class="number">0</span>) {
+        tmp = a;
+        a += b;
+       b = tmp;
+    }
+    <span class="keyword">return</span> a;
+}
 
+document.write(fib(<span class="number">10</span>));
+</code></pre>
       
     </div>
     
@@ -302,7 +331,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="my-first-blog" data-title="markdown 学习" data-url="https://github.com/huangxiaohao/huangxiaohao.github.io/2015/07/25/my-first-blog/"></div>
+	<div class="ds-thread" data-thread-key="my-first-blog" data-title="markdown语法浅谈" data-url="https://github.com/huangxiaohao/huangxiaohao.github.io/2015/07/25/my-first-blog/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
