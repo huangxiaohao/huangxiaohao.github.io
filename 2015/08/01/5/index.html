@@ -21,7 +21,7 @@ $(window).scroll(function () {
     var scrollTop = $(this).scrollTop();//滚轮卷出（滚轮距顶部距离）高度
     var scrollHeight = $(document).height();//整个文档高度
     var windowHeight = $(thi">
-<meta property="og:updated_time" content="2015-09-16T12:15:22.865Z">
+<meta property="og:updated_time" content="2015-09-16T12:18:38.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js/jquery控制页面动态加载数据 滑动滚动条自动加载更多内容">
 <meta name="twitter:description" content="啦啦啦~~~
@@ -246,7 +246,7 @@ $(<span class="built_in">window</span>).scroll(<span class="function"><span clas
             lock=<span class="literal">false</span>;   <span class="comment">//在下拉之后让lock=false   即关闭锁  防止错误拉取数据         </span>
             <span class="comment">/*此处是滚动条到距底部n个px时候触发的事件，在这里写要加载的数据，或者是拉动滚动条的操作*/</span> 
             $.ajax({              
-                在数据加载成功之后 重新将锁打开          
+                <span class="comment">//在数据加载成功之后 重新将锁打开          </span>
                 lock=<span class="literal">true</span>;         
             });     
         }          
