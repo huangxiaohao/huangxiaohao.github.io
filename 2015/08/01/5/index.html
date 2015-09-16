@@ -8,9 +8,9 @@
   <meta name="description" content="啦啦啦~~~
 下面的代码主要是控制滚动条下拉时的加载事件的
 $(window).scroll(function () {
-        var scrollTop = $(this).scrollTop();//滚轮卷出（滚轮距顶部距离）高度
-        var scrollHeight = $(document).height();//整个文档高度
-        var windowHe">
+    var scrollTop = $(this).scrollTop();//滚轮卷出（滚轮距顶部距离）高度
+    var scrollHeight = $(document).height();//整个文档高度
+    var windowHeight = $(thi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js/jquery控制页面动态加载数据 滑动滚动条自动加载更多内容">
 <meta property="og:url" content="https://github.com/huangxiaohao/huangxiaohao.github.io/2015/08/01/5/index.html">
@@ -18,18 +18,18 @@ $(window).scroll(function () {
 <meta property="og:description" content="啦啦啦~~~
 下面的代码主要是控制滚动条下拉时的加载事件的
 $(window).scroll(function () {
-        var scrollTop = $(this).scrollTop();//滚轮卷出（滚轮距顶部距离）高度
-        var scrollHeight = $(document).height();//整个文档高度
-        var windowHe">
-<meta property="og:updated_time" content="2015-08-01T10:02:47.177Z">
+    var scrollTop = $(this).scrollTop();//滚轮卷出（滚轮距顶部距离）高度
+    var scrollHeight = $(document).height();//整个文档高度
+    var windowHeight = $(thi">
+<meta property="og:updated_time" content="2015-09-16T12:15:22.865Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js/jquery控制页面动态加载数据 滑动滚动条自动加载更多内容">
 <meta name="twitter:description" content="啦啦啦~~~
 下面的代码主要是控制滚动条下拉时的加载事件的
 $(window).scroll(function () {
-        var scrollTop = $(this).scrollTop();//滚轮卷出（滚轮距顶部距离）高度
-        var scrollHeight = $(document).height();//整个文档高度
-        var windowHe">
+    var scrollTop = $(this).scrollTop();//滚轮卷出（滚轮距顶部距离）高度
+    var scrollHeight = $(document).height();//整个文档高度
+    var windowHeight = $(thi">
   
   
     <link rel="icon" href="img/title.jpg">
@@ -223,16 +223,35 @@ $(window).scroll(function () {
         <p>啦啦啦~~~</p>
 <p><strong>下面的代码主要是控制滚动条下拉时的加载事件的</strong></p>
 <pre><code>$(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{
-        <span class="keyword">var</span> scrollTop = $(<span class="keyword">this</span>).scrollTop();<span class="comment">//滚轮卷出（滚轮距顶部距离）高度</span>
-        <span class="keyword">var</span> scrollHeight = $(<span class="built_in">document</span>).height();<span class="comment">//整个文档高度</span>
-        <span class="keyword">var</span> windowHeight = $(<span class="keyword">this</span>).height();<span class="comment">//当前屏幕高度       </span>
-         <span class="comment">//文档-(卷去+当前屏幕)=文档余下距离          </span>
-         <span class="keyword">if</span> (scrollHeight - (scrollTop + windowHeight)&lt;n) {
+    <span class="keyword">var</span> scrollTop = $(<span class="keyword">this</span>).scrollTop();<span class="comment">//滚轮卷出（滚轮距顶部距离）高度</span>
+    <span class="keyword">var</span> scrollHeight = $(<span class="built_in">document</span>).height();<span class="comment">//整个文档高度</span>
+    <span class="keyword">var</span> windowHeight = $(<span class="keyword">this</span>).height();<span class="comment">//当前屏幕高度       </span>
+     <span class="comment">//文档-(卷去+当前屏幕)=文档余下距离          </span>
+     <span class="keyword">if</span> (scrollHeight - (scrollTop + windowHeight)&lt;n) {
 
-           <span class="comment">/*此处是滚动条到距底部n个px时候触发的事件，在这里写要加载的数据，或者是拉动滚动条的操作*/</span>
+       <span class="comment">/*此处是滚动条到距底部n个px时候触发的事件，在这里写要加载的数据，或者是拉动滚动条的操作*/</span>
 
-        }
-    });
+    }
+});
+</code></pre><a id="more"></a>
+<p><strong>下面的代码将会优化上述代码，加入‘锁’，防止数据错误加载</strong></p>
+<pre><code><span class="keyword">var</span> lock = <span class="literal">true</span>;  <span class="comment">//默认锁打开</span>
+$(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{
+    <span class="keyword">var</span> scrollTop = $(<span class="keyword">this</span>).scrollTop();<span class="comment">//滚轮卷出（滚轮距顶部距离）高度</span>
+    <span class="keyword">var</span> scrollHeight = $(<span class="built_in">document</span>).height();<span class="comment">//整个文档高度</span>
+    <span class="keyword">var</span> windowHeight = $(<span class="keyword">this</span>).height();<span class="comment">//当前屏幕高度      </span>
+    <span class="comment">//文档-(卷去+当前屏幕)=文档余下距离         </span>
+    <span class="keyword">if</span>(lock){     <span class="comment">//如果lock=true即锁打开时   才能继续下拉加载其他数据  </span>
+        <span class="keyword">if</span> (scrollHeight - (scrollTop + windowHeight)&lt;n) {          
+            lock=<span class="literal">false</span>;   <span class="comment">//在下拉之后让lock=false   即关闭锁  防止错误拉取数据         </span>
+            <span class="comment">/*此处是滚动条到距底部n个px时候触发的事件，在这里写要加载的数据，或者是拉动滚动条的操作*/</span> 
+            $.ajax({              
+                在数据加载成功之后 重新将锁打开          
+                lock=<span class="literal">true</span>;         
+            });     
+        }          
+    }             
+});
 </code></pre>
       
     </div>
